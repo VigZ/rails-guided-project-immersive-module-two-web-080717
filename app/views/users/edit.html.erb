@@ -1,0 +1,9 @@
+<h1> Edit User Info <h1>
+
+<%= form_for @user do |f| %>
+Edit Username: <%= f.text_field :username %> <br>
+Edit Email: <%= f.text_field :email %> <br>
+Edit Password: <%= f.password_field :password %> <br>
+Please confirm your new password: <%= f.password_field :password_confirmation%> <br>
+<%= f.submit %>
+<% end %>
