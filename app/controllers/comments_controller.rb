@@ -7,14 +7,16 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    # if @comment.save
-    #   redirect_to picture_path(params[:id])
+    @comment.save
+    
+    redirect_to picture_path(@comment.picture)
     # else
     #   redirect_to picture_path(params[:id])
     # end
   end
 
   def show
+    @comment = Comment.find(params[:id])
   end
 
   def edit
