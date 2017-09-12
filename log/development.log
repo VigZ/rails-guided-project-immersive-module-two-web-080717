@@ -4228,3 +4228,2298 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 61ms (Views: 53.3ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/login" for 127.0.0.1 at 2017-09-12 10:39:15 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-12 10:39:18 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 15ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-12 10:39:24 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?method=post" for 127.0.0.1 at 2017-09-12 10:39:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2017-09-12 10:39:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2017-09-12 10:39:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login?method=post" for 127.0.0.1 at 2017-09-12 10:39:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-12 10:39:35 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-09-12 10:39:36 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `helper_method' for #<UsersController:0x007f96518632f8>
+Did you mean?  helpers_path
+               _helper_methods
+               helpers_path?
+               helpers_path=
+               helpers
+               _helper_methods=
+               _helper_methods?):
+  
+app/controllers/application_controller.rb:25:in `current_user'
+app/controllers/application_controller.rb:12:in `signed_in?'
+app/controllers/application_controller.rb:6:in `signin_required'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:39:37 -0400
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.0ms)
+
+
+  
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 10:39:37 -0400
+NoMethodError (undefined method `helper_method' for #<UsersController:0x007f9651a49680>
+Did you mean?  helpers_path
+               _helper_methods
+               helpers_path?
+               helpers_path=
+               helpers
+               _helper_methods=
+               _helper_methods?):
+Processing by UsersController#show as HTML
+  
+  Parameters: {"id"=>"1"}
+app/controllers/application_controller.rb:25:in `current_user'
+app/controllers/application_controller.rb:12:in `signed_in?'
+app/controllers/application_controller.rb:6:in `signin_required'
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `helper_method' for #<UsersController:0x007f964eeca428>
+Did you mean?  helpers_path
+               _helper_methods
+               helpers_path?
+               helpers_path=
+               helpers
+               _helper_methods=
+               _helper_methods?):
+  
+app/controllers/application_controller.rb:25:in `current_user'
+app/controllers/application_controller.rb:12:in `signed_in?'
+app/controllers/application_controller.rb:6:in `signin_required'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:39:38 -0400
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `helper_method' for #<UsersController:0x007f9651a7a5a0>
+Did you mean?  helpers_path
+               _helper_methods
+               helpers_path?
+               helpers_path=
+               helpers
+               _helper_methods=
+               _helper_methods?):
+  
+app/controllers/application_controller.rb:25:in `current_user'
+app/controllers/application_controller.rb:12:in `signed_in?'
+app/controllers/application_controller.rb:6:in `signin_required'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:41:26 -0400
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 2ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:41:26 -0400
+  
+ArgumentError (Before process_action callback :login_required has not been defined):
+  
+app/controllers/sessions_controller.rb:2:in `<class:SessionsController>'
+app/controllers/sessions_controller.rb:1:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 2ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:05 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:06 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:06 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/secret" for 127.0.0.1 at 2017-09-12 10:42:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/secret"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 9ms (Views: 6.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 2ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:12 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:42:29 -0400
+Processing by SessionsController#signin as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:43:11 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (44.3ms)
+  Rendered layouts/_header_bar.html.erb (157.0ms)
+Completed 500 Internal Server Error in 2312ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `signed_in?' for #<#<Class:0x007f874eac1598>:0x007f874eaab6a8>
+Did you mean?  signin_url):
+    1: <% if signed_in? %>
+    2: Have a pic, <% current_user.username %>? Share it!
+    3: 
+    4: <%=link_to "Sign Out", signout_path %>
+  
+app/views/layouts/_header_bar.html.erb:1:in `_app_views_layouts__header_bar_html_erb___2694019157096797944_70109566710040'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___491701050837659223_70109558440760'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:44:54 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header_bar.html.erb (180.4ms)
+Completed 500 Internal Server Error in 247ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `signed_in?' for #<#<Class:0x007f8750979850>:0x007f874c9a0ee0>
+Did you mean?  signin_url):
+    1: <% if signed_in? %>
+    2: Have a pic, <% current_user.username %>? Share it!
+    3: 
+    4: <%=link_to "Sign Out", signout_path %>
+  
+app/views/layouts/_header_bar.html.erb:1:in `_app_views_layouts__header_bar_html_erb___2694019157096797944_70109575779560'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___491701050837659223_70109540916880'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:45:45 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header_bar.html.erb (130.1ms)
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `signed_in?' for #<#<Class:0x007f874fe39e68>:0x007f875205bf28>
+Did you mean?  signin_url):
+    1: <% if signed_in? %>
+    2: Have a pic, <% current_user.username %>? Share it!
+    3: 
+    4: <%=link_to "Sign Out", signout_path %>
+  
+app/views/layouts/_header_bar.html.erb:1:in `_app_views_layouts__header_bar_html_erb___2694019157096797944_70109577101460'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___491701050837659223_70109586703160'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:46:56 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:47:07 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:50:54 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-09-12 10:50:54 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+Started GET "/" for 127.0.0.1 at 2017-09-12 10:50:54 -0400
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Processing by Rails::WelcomeController#index as HTML
+Completed 200 OK in 15ms (Views: 10.4ms)
+
+
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (8.8ms)
+Completed 200 OK in 25ms (Views: 22.4ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:50:58 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:50:59 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-09-12 10:51:00 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 8ms (Views: 5.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:51:00 -0400
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 2ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:51:00 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/users/3" for 127.0.0.1 at 2017-09-12 10:51:01 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 2ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:51:01 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/users/signin" for 127.0.0.1 at 2017-09-12 10:51:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"signin"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:51:03 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:51:12 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signup" for 127.0.0.1 at 2017-09-12 10:51:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/signup" for 127.0.0.1 at 2017-09-12 10:52:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:52:29 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-09-12 10:52:29 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 44ms (Views: 24.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:52:30 -0400
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:52:30 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/users/3" for 127.0.0.1 at 2017-09-12 10:52:31 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:52:31 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/users/signin" for 127.0.0.1 at 2017-09-12 10:52:32 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"signin"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:52:32 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 10:52:33 -0400
+Processing by UsersController#signup as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 2ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:52:33 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:53:56 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:54:00 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-09-12 10:54:01 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 8ms (Views: 5.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:54:01 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_header_bar.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 48.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:54:02 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header_bar.html.erb (1.1ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:54:35 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:54:38 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header_bar.html.erb (0.6ms)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/DatAssDoe" for 127.0.0.1 at 2017-09-12 10:54:40 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"DatAssDoe"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "DatAssDoe"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 7]]
+  Rendered users/show.html.erb within layouts/application (36.9ms)
+  Rendered layouts/_header_bar.html.erb (0.6ms)
+Completed 200 OK in 109ms (Views: 59.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pictures/6" for 127.0.0.1 at 2017-09-12 10:54:42 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 6]]
+  Rendered pictures/show.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_header_bar.html.erb (0.9ms)
+Completed 200 OK in 72ms (Views: 52.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/DatAssDoe" for 127.0.0.1 at 2017-09-12 10:54:45 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"DatAssDoe"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "DatAssDoe"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 7]]
+  Rendered users/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header_bar.html.erb (0.5ms)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:54:47 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header_bar.html.erb (1.1ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/Tomtom" for 127.0.0.1 at 2017-09-12 10:54:55 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Tomtom"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Tomtom"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 50ms (Views: 30.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:55:54 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header_bar.html.erb (0.6ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 10:56:06 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:56:08 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 10:59:59 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-09-12 10:59:59 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 10ms (Views: 7.8ms)
+
+
+Started GET "/secret" for 127.0.0.1 at 2017-09-12 11:00:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/secret"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sessions/signin" for 127.0.0.1 at 2017-09-12 11:00:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sessions/signin"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:00:20 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:00:21 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:02:30 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:10:58 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:11:01 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:11:38 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:11:43 -0400
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:12:09 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (undefined method `helper_method' for main:Object):
+  
+app/controllers/sessions_controller.rb:25:in `<top (required)>'
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:12:47 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_header_bar.html.erb (1.0ms)
+Completed 200 OK in 266ms (Views: 250.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:13:27 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header_bar.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 26.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:13:32 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header_bar.html.erb (1.0ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:01 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:03 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header_bar.html.erb (1.3ms)
+Completed 200 OK in 50ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:04 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:23 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header_bar.html.erb (0.6ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:25 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:27 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:27 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header_bar.html.erb (0.9ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:27 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:27 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:27 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header_bar.html.erb (1.0ms)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:27 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header_bar.html.erb (0.9ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:43 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-12 11:14:45 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 11:14:45 -0400
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:45 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 11:14:47 -0400
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:14:47 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header_bar.html.erb (0.9ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-12 11:15:09 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9YrKjsplSUX547iU9GAZALycM+5uWPzHRW3YRh0CMogC96cnUwFPfe32IAzNVVnDHzDB/IJ7hXBAemeC/GoERQ==", "user"=>{"username"=>"max", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:15:09 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header_bar.html.erb (0.6ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:15:40 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 51ms (Views: 34.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:15:41 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 43ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:17:08 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header_bar.html.erb (1.0ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:17:09 -0400
+Processing by UsersController#signup as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:17:09 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:17:11 -0400
+Processing by UsersController#signup as HTML
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:17:11 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:18:19 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 49ms (Views: 32.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:18:21 -0400
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 42ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:18:23 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header_bar.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:18:35 -0400
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header_bar.html.erb (0.9ms)
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-12 11:19:05 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XoYMFHNKl9tchnQNb3wA/b1H57cRU5qUmEcMrCsjRufZ/sDMVBinhJriJMFls0u8wYBIglMVVWgG1/qL2QjECw==", "user"=>{"username"=>"Kyle", "email"=>"Kyle@kyle.kyle", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Kyle"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Kyle@kyle.kyle"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "Kyle@kyle.kyle"], ["username", "Kyle"], ["password_digest", "$2a$10$5fddPVguE5oqzxt1A4bZpOIYyUrqS8cKb.f4AICRzBvn0CCI4c7Du"], ["created_at", "2017-09-12 15:19:05.265380"], ["updated_at", "2017-09-12 15:19:05.265380"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/Kyle
+Completed 302 Found in 91ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/users/Kyle" for 127.0.0.1 at 2017-09-12 11:19:05 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Kyle"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:19:05 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header_bar.html.erb (0.6ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-12 11:19:16 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zcUIduwIe3W+jBdgNaO4onLwydr/oTsAs1cuRUpZ0s46uGXfdWx9TaqZj/gMlvhh0Vw7yBOCQre2QJGBqzHkAw==", "user"=>{"username"=>"kyle", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kyle"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "kyle"], ["password_digest", "$2a$10$pO94RcjeJJXh1EpLq2K9XeA0avfj0xzMCZRRUAXaXt.9GJ6UEdd3i"], ["created_at", "2017-09-12 15:19:16.159653"], ["updated_at", "2017-09-12 15:19:16.159653"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/kyle
+Completed 302 Found in 92ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/kyle" for 127.0.0.1 at 2017-09-12 11:19:16 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"kyle"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:19:16 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:22:33 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-12 11:22:39 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0JTlsOVQjS/yymc0ZY0tCCVVKvzGGXxAcpAcIvnLKNBX7ClowgK9cDSuN/hvQmZJWZKFyYRfs7zsAOoFC+CqPA==", "user"=>{"username"=>"Kyle", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Kyle"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/users/signup
+Completed 302 Found in 91ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:22:39 -0400
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header_bar.html.erb (1.0ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:22:43 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header_bar.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:22:44 -0400
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:22:45 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header_bar.html.erb (1.2ms)
+Completed 200 OK in 41ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:23:34 -0400
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-12 11:23:54 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dsgK6XUDnl6ofhnQ2gtUEAeq/YYNyAhfZm93+b9wXTPxsMYxUlGuAW4aSRzQxB9Re21Ss0+Ox6P4/4HeTVvf3w==", "user"=>{"username"=>"tuck", "email"=>"tuck@tuck.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "tuck"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tuck@tuck.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "tuck@tuck.com"], ["username", "tuck"], ["password_digest", "$2a$10$XJaukswRSa0iJe.pE5ioVexFHVWZ/seTd.WU3qm0Oe9fZUyk1I3nq"], ["created_at", "2017-09-12 15:23:54.918661"], ["updated_at", "2017-09-12 15:23:54.918661"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/tuck
+Completed 302 Found in 86ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/users/tuck" for 127.0.0.1 at 2017-09-12 11:23:54 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"tuck"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:23:54 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header_bar.html.erb (0.6ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-12 11:25:52 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fKbeAnKG2/UGtrwDlE6NMSD5Wswyk9+WToCqZQMw/y2L27Or6+LdzRKjJJute83yg1Wo3t6wpiFLlxWh4ljJ4A==", "user"=>{"username"=>"tuck", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "tuck"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/users/signup
+Completed 302 Found in 101ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:25:52 -0400
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header_bar.html.erb (1.1ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:27:07 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 58ms (Views: 39.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-12 11:27:16 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eL0roSebaPmIoiil6NABUjW5hImZFe6vxorsYgrQMIr/xed5AMlYpk7GeGniH0oTSX4rvNtTIVNYGhpF+PuyZg==", "user"=>{"username"=>"tuck", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "tuck"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/users/signup
+Completed 302 Found in 88ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:27:16 -0400
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header_bar.html.erb (1.4ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signin" for 127.0.0.1 at 2017-09-12 11:32:15 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"signin"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:32:15 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_header_bar.html.erb (1.1ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 11:32:16 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header_bar.html.erb (1.0ms)
+Completed 200 OK in 63ms (Views: 56.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 11:32:16 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header_bar.html.erb (1.1ms)
+Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/Matt" for 127.0.0.1 at 2017-09-12 11:32:18 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Matt"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:32:18 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-12 11:32:36 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUYGn07to3gfI7S3JjH/VBZYSH42lEertA4xBUDypjUqPspHab+TJ9lH5Hss/rQVap/nS3TSiFcqnscistkk2Q==", "user"=>{"username"=>"tuck", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "tuck"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/users/signup
+Completed 302 Found in 85ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:32:37 -0400
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:38:32 -0400
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header_bar.html.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 30.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:38:52 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (18.8ms)
+  Rendered layouts/_header_bar.html.erb (1.1ms)
+Completed 200 OK in 319ms (Views: 287.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:38:54 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/flatironschool/Development/rails-guided-project-immersive-module-two-web-080717/app/views/sessions/signin.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/sessions/signin.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:39:14 -0400
+Processing by SessionsController#signin as HTML
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:39:14 -0400
+Processing by UsersController#signup as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header_bar.html.erb (1.0ms)
+Completed 200 OK in 73ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_header_bar.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-12 11:39:33 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0LCxAH4wUseJf1y/4QQDJpwaw0DAyX3DQ7oCLvgFM78nzdyp51RU/51qxCfYMUPlP7YxUizqBHRGrb3qGW0Fcg==", "username"=>"tuck", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (tuck) LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: tuck: SELECT  "users".* FROM "users" WHERE (tuck) LIMIT ?):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/sessions" for 127.0.0.1 at 2017-09-12 11:59:24 -0400
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:59:34 -0400
+  
+Started GET "/" for 127.0.0.1 at 2017-09-12 11:59:34 -0400
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Processing by SessionsController#signin as HTML
+Processing by Rails::WelcomeController#index as HTML
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:59:34 -0400
+Started GET "/" for 127.0.0.1 at 2017-09-12 11:59:34 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered sessions/signin.html.erb within layouts/application (0.8ms)
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+Completed 200 OK in 21ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 88ms (Views: 71.6ms | ActiveRecord: 0.7ms)
+
+
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header_bar.html.erb (0.2ms)
+Completed 200 OK in 45ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-12 11:59:37 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?method=post" for 127.0.0.1 at 2017-09-12 11:59:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2017-09-12 11:59:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2017-09-12 11:59:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login?method=post" for 127.0.0.1 at 2017-09-12 11:59:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-12 11:59:47 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:59:48 -0400
+Processing by SessionsController#signin as HTML
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 11:59:48 -0400
+  Rendering sessions/signin.html.erb within layouts/application
+Processing by UsersController#signup as HTML
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_header_bar.html.erb (1.4ms)
+Completed 200 OK in 67ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 11:59:50 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header_bar.html.erb (1.2ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-12 11:59:57 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1DwZUjSWXsuNGl5684LajQ5Q57yB6YUmlosUYhQi+HIjQXT7rfJY85kPxuLKt5pOrfwVrm3K/JGTnKum9UrOvw==", "username"=>"tuck", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "tuck"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 90ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 11:59:58 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendered layouts/_header_bar.html.erb (346.7ms)
+Completed 500 Internal Server Error in 387ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `signout_path' for #<#<Class:0x007f9bd86871c8>:0x007f9bd4c53e20>
+Did you mean?  signin_path):
+    1: <% if signed_in? %>
+    2: Have a pic, <% current_user.username %>? Share it!
+    3: 
+    4: <%=link_to "Sign Out", signout_path %>
+    5: 
+    6: <% else %>
+    7: 
+  
+app/views/layouts/_header_bar.html.erb:4:in `_app_views_layouts__header_bar_html_erb___2792033544596977742_70153682813640'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__3240000728892794771_70153633109500'
+Started GET "/users/signin" for 127.0.0.1 at 2017-09-12 12:28:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"signin"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "signin"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `pictures' for nil:NilClass):
+  
+app/controllers/users_controller.rb:22:in `show'
+Started GET "/" for 127.0.0.1 at 2017-09-12 12:28:17 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 12:28:19 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendered layouts/_header_bar.html.erb (1.7ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 12:28:20 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendered layouts/_header_bar.html.erb (2.1ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2017-09-12 12:28:27 -0400
+Processing by SessionsController#signout as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]):
+  
+app/controllers/sessions_controller.rb:21:in `signout'
+Started GET "/signout" for 127.0.0.1 at 2017-09-12 12:29:02 -0400
+Processing by SessionsController#signout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 14ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 12:29:02 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header_bar.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 12:29:05 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header_bar.html.erb (0.8ms)
+Completed 200 OK in 33ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 12:29:42 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-12 12:29:50 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pX3YzwbBrzjOQkE7Px3N7qUmqxSsLIbJDKjOwY6xuydSALVmn6WpANpX2aMGKI0tBopZBkAP/34Jv3EFb9mN6g==", "username"=>"kyle", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kyle"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 84ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 12:29:50 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered layouts/_header_bar.html.erb (2.5ms)
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 12:32:07 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-09-12 12:33:39 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (5.7ms)
+Completed 200 OK in 25ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 12:33:46 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header_bar.html.erb (1.2ms)
+Completed 200 OK in 258ms (Views: 236.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 12:33:50 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-09-12 12:34:00 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ceCs4ewWzi1BA8FADSYXvW4/3Fv03IkdmytFZN+0cx2CZMgJNtM6jem7egGEoJxR3CHgga9wcimUAMo34gUPxw==", "username"=>"Kyle", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Kyle"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 99ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 12:34:00 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered layouts/_header_bar.html.erb (3.2ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 12:34:34 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered layouts/_header_bar.html.erb (3.4ms)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/Tomtom" for 127.0.0.1 at 2017-09-12 12:34:37 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Tomtom"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Tomtom"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (42.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered layouts/_header_bar.html.erb (2.2ms)
+Completed 200 OK in 127ms (Views: 76.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pictures/11" for 127.0.0.1 at 2017-09-12 12:34:40 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 11]]
+  Rendered pictures/show.html.erb within layouts/application (28.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered layouts/_header_bar.html.erb (2.7ms)
+Completed 200 OK in 92ms (Views: 72.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pictures/15" for 127.0.0.1 at 2017-09-12 12:34:45 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 15]]
+  Rendered pictures/show.html.erb within layouts/application (5.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered layouts/_header_bar.html.erb (3.2ms)
+Completed 200 OK in 57ms (Views: 49.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pictures/10" for 127.0.0.1 at 2017-09-12 12:34:49 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 10]]
+  Rendered pictures/show.html.erb within layouts/application (6.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered layouts/_header_bar.html.erb (1.8ms)
+Completed 200 OK in 52ms (Views: 44.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2017-09-12 12:34:53 -0400
+Processing by SessionsController#signout as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 12:34:53 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header_bar.html.erb (1.3ms)
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/Kyle" for 127.0.0.1 at 2017-09-12 12:35:02 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Kyle"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 12:35:02 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header_bar.html.erb (1.2ms)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/kyle" for 127.0.0.1 at 2017-09-12 12:35:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"kyle"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 12:35:04 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header_bar.html.erb (0.6ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/tuck" for 127.0.0.1 at 2017-09-12 12:35:06 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"tuck"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as :signin_required rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2017-09-12 12:35:06 -0400
+Processing by SessionsController#signin as HTML
+  Rendering sessions/signin.html.erb within layouts/application
+  Rendered sessions/signin.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header_bar.html.erb (0.7ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 13:27:04 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered layouts/_header_bar.html.erb (3.2ms)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 0.9ms)
+
+

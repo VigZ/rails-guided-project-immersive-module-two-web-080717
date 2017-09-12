@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :signin_required, :only => [:signup, :create, :index]
   def index
     @users = User.all
   end
