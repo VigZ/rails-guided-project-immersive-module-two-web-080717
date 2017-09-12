@@ -3,16 +3,18 @@ class CommentsController < ApplicationController
   end
 
   def new
+    @comment = Comment.new
   end
 
   def create
     @comment = Comment.new(comment_params)
-    @comment.save
-    
-    redirect_to picture_path(@comment.picture)
-    # else
-    #   redirect_to picture_path(params[:id])
-    # end
+    if @comment.save
+      redirect_to picture_path(@comment.picture)
+    else
+      #show error message on page
+      # render not redirect
+      redirect_to picture_path(@comment.picture)
+    end
   end
 
   def show
@@ -31,7 +33,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:content, :user_id, :picture_id)
+    params.require(:comment).permit(:user_id, :picture_id, :content)
   end
 
 end
