@@ -1,0 +1,11 @@
+<% if signed_in? %>
+Have a pic, <%= current_user.username.capitalize %>? You should share it!
+
+<%=link_to "Sign Out", signout_path %>
+
+<% else %>
+
+<%= link_to "Please sign in!", signin_path %> Or... <%= link_to "Sign Up", users_signup_path %>
+
+
+<% end %>
