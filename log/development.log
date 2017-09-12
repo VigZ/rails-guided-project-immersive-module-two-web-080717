@@ -2789,3 +2789,1442 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 50ms (Views: 42.4ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/users" for 127.0.0.1 at 2017-09-12 08:43:51 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 402ms (Views: 378.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 08:43:56 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (31.7ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (The method .order() must contain arguments.):
+    11:     <h1>Upload some Pics!</h1>
+    12:   <%else%>
+    13:   <h2>Here are <%= @user.username %>'s pics... </h2>
+    14:     <%@pictures.order.each do |picture| %>
+    15:       <h1><%= picture.title %><h2>
+    16:         <%= link_to (image_tag (picture.image_url)), picture_path(picture) %><br>
+    17:     <% end %>
+  
+app/views/users/show.html.erb:14:in `_app_views_users_show_html_erb___3048124145774148460_70253537377560'
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 08:44:29 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.8ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY "pictures"."created_at" ASC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 63ms (Views: 57.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/pictures/new" for 127.0.0.1 at 2017-09-12 08:44:38 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 60ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2017-09-12 08:45:16 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2PxkHILckkLFsc5z4v09wuGCniBb74Lumm0CYMrz6wJCdnyn7WW99iZLAwlm5C3z1k+SO/2TUHQ8n70c/pH6Bg==", "picture"=>{"title"=>"Grass Hungry Pup", "image_url"=>"http://www.petmd.com/sites/default/files/why-dogs-eat-grass.png", "user_id"=>"1"}, "commit"=>"Upload Picture"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "pictures" ("image_url", "title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image_url", "http://www.petmd.com/sites/default/files/why-dogs-eat-grass.png"], ["title", "Grass Hungry Pup"], ["user_id", 1], ["created_at", "2017-09-12 12:45:16.893103"], ["updated_at", "2017-09-12 12:45:16.893103"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pictures/14
+Completed 302 Found in 12ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/pictures/14" for 127.0.0.1 at 2017-09-12 08:45:16 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 14]]
+  Rendered pictures/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 64ms (Views: 41.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 08:45:21 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY "pictures"."created_at" ASC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 51ms (Views: 46.6ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY id ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY id DESC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 08:49:56 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 474ms (Views: 386.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/pictures/new" for 127.0.0.1 at 2017-09-12 08:50:02 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 63ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2017-09-12 08:50:40 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sLkyMVCZ9JHKEAQ0qnotXAHtk/k1Wod1ut+a+VqGU0oqMyqKPyDbJSnqyU4uYz1tNiCf4pMmVe8cLSWFbuRCTg==", "picture"=>{"title"=>"Sleepy Doge", "image_url"=>"http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_720/images/live/p0/55/8x/p0558xnk.jpg", "user_id"=>"1"}, "commit"=>"Upload Picture"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("image_url", "title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image_url", "http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_720/images/live/p0/55/8x/p0558xnk.jpg"], ["title", "Sleepy Doge"], ["user_id", 1], ["created_at", "2017-09-12 12:50:40.316929"], ["updated_at", "2017-09-12 12:50:40.316929"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pictures/15
+Completed 302 Found in 13ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/pictures/15" for 127.0.0.1 at 2017-09-12 08:50:40 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 15]]
+  Rendered pictures/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 150ms (Views: 121.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 08:50:45 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 62ms (Views: 54.6ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 08:54:32 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (64.5ms)
+Completed 200 OK in 583ms (Views: 505.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 08:54:53 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 59ms (Views: 54.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-12 08:55:35 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 91ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 09:02:30 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 475ms (Views: 417.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 09:02:32 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 56ms (Views: 51.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pictures/15" for 127.0.0.1 at 2017-09-12 09:02:41 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 15]]
+  Rendered pictures/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 131ms (Views: 83.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 09:02:43 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.7ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 91ms (Views: 79.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 09:03:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (1.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 93ms (Views: 62.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 09:03:05 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 49ms (Views: 43.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 09:03:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tomtom" for 127.0.0.1 at 2017-09-12 09:03:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/tomtom"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 09:05:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (86.7ms)
+Completed 200 OK in 215ms (Views: 148.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/pictures/15" for 127.0.0.1 at 2017-09-12 09:05:06 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 15]]
+  Rendered pictures/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 72ms (Views: 41.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 09:05:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 89ms (Views: 77.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:05:08 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 55ms (Views: 49.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-09-12 09:05:10 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 4], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 63ms (Views: 55.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-09-12 09:05:20 -0400
+  
+ArgumentError (Invalid route name, already in use: 'user' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/users/4" for 127.0.0.1 at 2017-09-12 09:05:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/4"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/4" for 127.0.0.1 at 2017-09-12 09:06:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/4"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/tomtom" for 127.0.0.1 at 2017-09-12 09:06:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/tomtom"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/username" for 127.0.0.1 at 2017-09-12 09:06:57 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/users_controller.rb:20:in `show'
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 09:08:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/tomtom" for 127.0.0.1 at 2017-09-12 09:08:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/tomtom"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:10:33 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 89ms (Views: 75.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-12 09:10:41 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"username"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/users_controller.rb:20:in `show'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:14:38 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Parameters: {"params"=>:username}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 429ms (Views: 405.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1?params=username" for 127.0.0.1 at 2017-09-12 09:14:40 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"params"=>:username, "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 141ms (Views: 90.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/1?params=username" for 127.0.0.1 at 2017-09-12 09:15:36 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"params"=>:username, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Picture Load (0.0ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Picture Load (0.0ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Picture Load (0.0ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Picture Load (0.0ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Picture Load (0.0ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Picture Load (0.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Picture Load (0.0ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  Rendered users/show.html.erb within layouts/application (437.6ms)
+Completed 500 Internal Server Error in 499ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_path' for #<#<Class:0x007f9fd7013f00>:0x007f9fd7003588>
+Did you mean?  user_path):
+    1: <h1>Hello <%= @user.username %>! </h1>
+    2: <%= link_to "Users Page", users_path %><br>
+    3: <br>
+    4: <h3><%=link_to "Upload a pic!", new_picture_path %></h3>
+    5: 
+  
+app/views/users/show.html.erb:2:in `_app_views_users_show_html_erb__1970020131353851374_70162241882760'
+Started GET "/users/1?params=username" for 127.0.0.1 at 2017-09-12 09:16:06 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"params"=>:username, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Hash):
+    1: <h1>Hello <%= @user.username %>! </h1>
+    2: <%= link_to "Users Page", user_path %><br>
+    3: <br>
+    4: <h3><%=link_to "Upload a pic!", new_picture_path %></h3>
+    5: 
+  
+app/views/users/show.html.erb:2:in `_app_views_users_show_html_erb__1970020131353851374_70162202952860'
+Started GET "/users/1?params=username" for 127.0.0.1 at 2017-09-12 09:18:44 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"params"=>"username", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 479ms (Views: 423.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:18:49 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 77ms (Views: 68.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/fqwfq" for 127.0.0.1 at 2017-09-12 09:18:51 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"fqwfq"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.9ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 129ms (Views: 118.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/Tomtom" for 127.0.0.1 at 2017-09-12 09:18:55 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Tomtom"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 75ms (Views: 66.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/JohnDoe" for 127.0.0.1 at 2017-09-12 09:19:02 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"JohnDoe"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 62ms (Views: 54.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/Matt" for 127.0.0.1 at 2017-09-12 09:19:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Matt"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 62ms (Views: 53.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/ThaDoeJoe" for 127.0.0.1 at 2017-09-12 09:19:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"ThaDoeJoe"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 55ms (Views: 47.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-12 09:19:46 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-12 09:21:38 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 100ms (Views: 69.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/Tomtom" for 127.0.0.1 at 2017-09-12 09:21:44 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Tomtom"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 51ms (Views: 44.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/Tomtom" for 127.0.0.1 at 2017-09-12 09:22:38 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Tomtom"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 93ms (Views: 62.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 09:22:43 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"signup"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:22:46 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 50ms (Views: 46.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 09:22:50 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"signup"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 43ms (Views: 39.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:22:58 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 50ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/JaneDoe" for 127.0.0.1 at 2017-09-12 09:22:59 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"JaneDoe"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 61ms (Views: 54.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/DatAssDoe" for 127.0.0.1 at 2017-09-12 09:23:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"DatAssDoe"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 59ms (Views: 52.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/DatAssDoe" for 127.0.0.1 at 2017-09-12 09:23:28 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"DatAssDoe"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 143ms (Views: 94.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:23:30 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/Matt" for 127.0.0.1 at 2017-09-12 09:23:31 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Matt"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 47ms (Views: 40.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/JohnDoe" for 127.0.0.1 at 2017-09-12 09:23:33 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"JohnDoe"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 61ms (Views: 52.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/KyleDoe" for 127.0.0.1 at 2017-09-12 09:23:35 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"KyleDoe"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 65ms (Views: 57.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/MikeMac" for 127.0.0.1 at 2017-09-12 09:23:39 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"MikeMac"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 54ms (Views: 46.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/JohnDoe" for 127.0.0.1 at 2017-09-12 09:24:25 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"JohnDoe"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 13ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=JohnDoe):
+  
+app/controllers/users_controller.rb:20:in `show'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:24:45 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 399ms (Views: 374.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/fqwfq" for 127.0.0.1 at 2017-09-12 09:24:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"fqwfq"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/users_controller.rb:20:in `show'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:24:52 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/Matt" for 127.0.0.1 at 2017-09-12 09:25:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Matt"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/users_controller.rb:20:in `show'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:25:16 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 65ms (Views: 56.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/Matt" for 127.0.0.1 at 2017-09-12 09:25:18 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Matt"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 117ms (Views: 75.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/fqwfq" for 127.0.0.1 at 2017-09-12 09:25:50 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"fqwfq"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:26:48 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 399ms (Views: 373.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/JaneDoe" for 127.0.0.1 at 2017-09-12 09:26:51 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"JaneDoe"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 21573ms (ActiveRecord: 1.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/users_controller.rb:22:in `show'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:27:18 -0400
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:27:29 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (248.9ms)
+Completed 200 OK in 1254ms (Views: 1129.6ms | ActiveRecord: 23.6ms)
+
+
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (472.9ms)
+Completed 200 OK in 2094ms (Views: 1910.0ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:27:48 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 401ms (Views: 379.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/Matt" for 127.0.0.1 at 2017-09-12 09:27:49 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Matt"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `pictures' for nil:NilClass):
+  
+app/controllers/users_controller.rb:21:in `show'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:28:18 -0400
+Processing by UsersController#index as HTML
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:28:29 -0400
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 110ms (Views: 92.5ms | ActiveRecord: 1.6ms)
+
+
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 97ms (Views: 85.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/Tomtom" for 127.0.0.1 at 2017-09-12 09:28:31 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Tomtom"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Tomtom"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 103ms (Views: 62.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/Matt" for 127.0.0.1 at 2017-09-12 09:28:34 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Matt"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Matt"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 61ms (Views: 53.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/JohnDoe" for 127.0.0.1 at 2017-09-12 09:28:41 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"JohnDoe"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "JohnDoe"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 4], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 49ms (Views: 42.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/KyleDoe" for 127.0.0.1 at 2017-09-12 09:28:45 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"KyleDoe"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "KyleDoe"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 54ms (Views: 47.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pictures/5" for 127.0.0.1 at 2017-09-12 09:30:01 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 5]]
+  Rendered pictures/show.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 89ms (Views: 65.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2017-09-12 09:30:13 -0400
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E+YFByR7AdZ/taSgBn6aFmLZQPcr5ZUAz+VZzxhfrcOPAUU+zPTASi2IL0VsOTVHbkmF5nY+tawu2LOlrXAcZQ==", "comment"=>{"content"=>"Dope pupcake"}, "picture_id"=>"5", "commit"=>"Create Comment"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"pictures", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/comments_controller.rb:12:in `create'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:35:09 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 388ms (Views: 363.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/singup" for 127.0.0.1 at 2017-09-12 09:35:14 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"singup"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "singup"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `pictures' for nil:NilClass):
+  
+app/controllers/users_controller.rb:21:in `show'
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 09:35:18 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"signup"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "signup"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `pictures' for nil:NilClass):
+  
+app/controllers/users_controller.rb:21:in `show'
+Started GET "/users/new" for 127.0.0.1 at 2017-09-12 09:35:30 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "new"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `pictures' for nil:NilClass):
+  
+app/controllers/users_controller.rb:21:in `show'
+Started PUT "/__web_console/repl_sessions/d6ac3e8dfd679a137e23f12d1f2500a5" for 127.0.0.1 at 2017-09-12 09:36:04 -0400
+Started PUT "/__web_console/repl_sessions/d6ac3e8dfd679a137e23f12d1f2500a5" for 127.0.0.1 at 2017-09-12 09:36:05 -0400
+Started PUT "/__web_console/repl_sessions/d6ac3e8dfd679a137e23f12d1f2500a5" for 127.0.0.1 at 2017-09-12 09:36:05 -0400
+Started PUT "/__web_console/repl_sessions/d6ac3e8dfd679a137e23f12d1f2500a5" for 127.0.0.1 at 2017-09-12 09:36:10 -0400
+Started PUT "/__web_console/repl_sessions/d6ac3e8dfd679a137e23f12d1f2500a5" for 127.0.0.1 at 2017-09-12 09:36:10 -0400
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:37:34 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 68ms (Views: 58.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/JaneDoe" for 127.0.0.1 at 2017-09-12 09:37:35 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"JaneDoe"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "JaneDoe"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 120ms (Views: 77.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/Tomtom" for 127.0.0.1 at 2017-09-12 09:37:38 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Tomtom"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Tomtom"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 52ms (Views: 45.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/Tomtom" for 127.0.0.1 at 2017-09-12 09:38:45 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Tomtom"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Tomtom"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 101ms (Views: 73.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/JaneDoe" for 127.0.0.1 at 2017-09-12 09:38:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"JaneDoe"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "JaneDoe"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 65ms (Views: 55.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-09-12 09:38:52 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "new"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `pictures' for nil:NilClass):
+  
+app/controllers/users_controller.rb:21:in `show'
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 09:38:55 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"signup"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "signup"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `pictures' for nil:NilClass):
+  
+app/controllers/users_controller.rb:21:in `show'
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:40:14 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 386ms (Views: 363.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 09:40:19 -0400
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 64ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:40:42 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/Croakus" for 127.0.0.1 at 2017-09-12 09:40:50 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Croakus"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Croakus"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 10], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 10]]
+  Rendered users/show.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 156ms (Views: 89.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/pictures/new" for 127.0.0.1 at 2017-09-12 09:40:54 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 59ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2017-09-12 09:41:34 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yJtlnsrLQQUuSIbtE4G0qejsbKoa4G4QNNyk9jiEXq5SEX0lpXJusc2yS5eXmKSY3yFgsbycvIqSLhuKDOZPqg==", "picture"=>{"title"=>"Life's a beach", "image_url"=>"https://media-cdn.tripadvisor.com/media/photo-s/0e/85/48/e6/seven-mile-beach-grand.jpg", "user_id"=>"11"}, "commit"=>"Upload Picture"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "pictures" ("image_url", "title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image_url", "https://media-cdn.tripadvisor.com/media/photo-s/0e/85/48/e6/seven-mile-beach-grand.jpg"], ["title", "Life's a beach"], ["user_id", 11], ["created_at", "2017-09-12 13:41:34.674122"], ["updated_at", "2017-09-12 13:41:34.674122"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pictures/16
+Completed 302 Found in 12ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/pictures/16" for 127.0.0.1 at 2017-09-12 09:41:34 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 16]]
+  Rendered pictures/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 65ms (Views: 47.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/NewUser24" for 127.0.0.1 at 2017-09-12 09:41:37 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"NewUser24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "NewUser24"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 11], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 56ms (Views: 49.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pictures/16" for 127.0.0.1 at 2017-09-12 09:41:55 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 16]]
+  Rendered pictures/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 60ms (Views: 54.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/NewUser24" for 127.0.0.1 at 2017-09-12 09:42:05 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"NewUser24"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "NewUser24"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 11], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 57ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:42:07 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 59ms (Views: 54.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/ThaDoeJoe" for 127.0.0.1 at 2017-09-12 09:42:09 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"ThaDoeJoe"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ThaDoeJoe"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 8], ["LIMIT", 1]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 8]]
+  Rendered users/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 50ms (Views: 43.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2017-09-12 09:42:19 -0400
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-12 09:42:46 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"svmenaBSjS1tGha8LCu7bZulxaT8n7xJoPCgQp41/o/TCZBq/3jsud9dUr9lMai0rQ3NSZ40n9K6KihNHbvOzA==", "user"=>{"username"=>"WayChillRach", "email"=>"rach@rach.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "WayChillRach"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rach@rach.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "rach@rach.com"], ["username", "WayChillRach"], ["password_digest", "$2a$10$LmkiH4dhygOW8hQFJE8ln.oxtIkcNH6jwSngLuEsCLuFiLONqcSOm"], ["created_at", "2017-09-12 13:42:46.788914"], ["updated_at", "2017-09-12 13:42:46.788914"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/WayChillRach
+Completed 302 Found in 96ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/WayChillRach" for 127.0.0.1 at 2017-09-12 09:42:46 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"WayChillRach"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "WayChillRach"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 12], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pictures/new" for 127.0.0.1 at 2017-09-12 09:42:50 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 49ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2017-09-12 09:43:17 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RCJzC+ViermKrKpZOtfkcYmQ2qoY0HbugV8PfmBXvUzeqGuwittVDWlWZyO+zvRAvl3Wsb6spHQnrbACVDWsSA==", "picture"=>{"title"=>"Beachey Vibes", "image_url"=>"http://travel.home.sndimg.com/content/dam/images/travel/fullset/2015/08/03/top-florida-beaches/key-west-beach-florida.jpg.rend.hgtvcom.966.725.suffix/1491580836931.jpeg", "user_id"=>"15"}, "commit"=>"Upload Picture"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/pictures/new
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/pictures/new" for 127.0.0.1 at 2017-09-12 09:43:17 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 47ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2017-09-12 09:43:22 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TspjKw9O+qvEDAsEFbnNCEp1vF5tlAquRJp7fNMHpBsvOm3cUGSbP3ZLTwdco97RfN20sw8/KTVeQPNzUImUWA==", "picture"=>{"title"=>"Beachey Vibes", "image_url"=>"http://travel.home.sndimg.com/content/dam/images/travel/fullset/2015/08/03/top-florida-beaches/key-west-beach-florida.jpg.rend.hgtvcom.966.725.suffix/1491580836931.jpeg", "user_id"=>"14"}, "commit"=>"Upload Picture"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/pictures/new
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/pictures/new" for 127.0.0.1 at 2017-09-12 09:43:22 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pictures/WayChillRach" for 127.0.0.1 at 2017-09-12 09:43:34 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"WayChillRach"}
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Picture with 'id'=WayChillRach):
+  
+app/controllers/pictures_controller.rb:18:in `show'
+Started GET "/users/WayChillRach" for 127.0.0.1 at 2017-09-12 09:43:42 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"WayChillRach"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "WayChillRach"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (9.1ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 12], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 55ms (Views: 42.0ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-12 09:43:52 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 38ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/WayChillRach" for 127.0.0.1 at 2017-09-12 09:44:05 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"WayChillRach"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "WayChillRach"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 12], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 53ms (Views: 45.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pictures/new" for 127.0.0.1 at 2017-09-12 09:44:06 -0400
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pictures" for 127.0.0.1 at 2017-09-12 09:44:15 -0400
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E+iMcUv8t9XEuriMSW6nCkVrhyzEL4xmKmSMxv37aLGJYpTKJEWYYSdAdfbNd7c7cqaLN2JTXvyMljO6yZl5tQ==", "picture"=>{"title"=>"Beachey Vibes", "image_url"=>"http://travel.home.sndimg.com/content/dam/images/travel/fullset/2015/08/03/top-florida-beaches/key-west-beach-florida.jpg.rend.hgtvcom.966.725.suffix/1491580836931.jpeg", "user_id"=>"12"}, "commit"=>"Upload Picture"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "pictures" ("image_url", "title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image_url", "http://travel.home.sndimg.com/content/dam/images/travel/fullset/2015/08/03/top-florida-beaches/key-west-beach-florida.jpg.rend.hgtvcom.966.725.suffix/1491580836931.jpeg"], ["title", "Beachey Vibes"], ["user_id", 12], ["created_at", "2017-09-12 13:44:15.667325"], ["updated_at", "2017-09-12 13:44:15.667325"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pictures/17
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/pictures/17" for 127.0.0.1 at 2017-09-12 09:44:15 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 17]]
+  Rendered pictures/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pictures/17" for 127.0.0.1 at 2017-09-12 09:44:21 -0400
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."picture_id" = ?[0m  [["picture_id", 17]]
+  Rendered pictures/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/WayChillRach" for 127.0.0.1 at 2017-09-12 09:44:23 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"WayChillRach"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "WayChillRach"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPicture Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "pictures" WHERE "pictures"."user_id" = ? LIMIT ?[0m  [["user_id", 12], ["LIMIT", 1]]
+  [1m[36mPicture Load (1.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."user_id" = ? ORDER BY created_at DESC[0m  [["user_id", 12]]
+  Rendered users/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 61ms (Views: 53.3ms | ActiveRecord: 1.8ms)
+
+

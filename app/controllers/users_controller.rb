@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def new
+  def signup
     @user = User.new
   end
 
@@ -12,12 +12,12 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to @user
     else
-      redirect_to new_user_path
+      redirect_to users_signup_path
     end
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by(username: params[:id])
     @pictures = @user.pictures
   end
 
