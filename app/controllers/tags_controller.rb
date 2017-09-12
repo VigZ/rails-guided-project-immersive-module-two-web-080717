@@ -8,14 +8,18 @@ class TagsController < ApplicationController
 
   def create
     @tag = Tag.new(tag_params)
+    @tag.user_id = current_user.id
     if @tag.save
-      redirect_to show_picture_path(@tag)
+      redirect_to picture_path(@tag.picture)
     else
-      redirect_to show_picture_path(@tag)
+      #show error message on page
+      # render not redirect
+      redirect_to picture_path(@tag.picture)
     end
   end
 
   def show
+    @tag = Tag.find(params[:id])
   end
 
   def edit

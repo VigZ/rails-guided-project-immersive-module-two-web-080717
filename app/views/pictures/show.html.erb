@@ -3,6 +3,9 @@
 
 <h1><%= @picture.title %></h1>
 <%= image_tag (@picture.image_url) %>
+<p>tags:</p><% @picture.tags.reject {|c| c.name.empty?}.each do |tag|%>
+  <%=link_to tag.name, tag_path(tag)%>
+<%end%>
 <h1> Comment on this picture: <h1>
 <%= form_for @comment do |f| %>
   <%= f.hidden_field :picture_id %> <br>

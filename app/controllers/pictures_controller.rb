@@ -1,6 +1,5 @@
 class PicturesController < ApplicationController
 
-
   def new
     @picture = Picture.new
   end
@@ -34,6 +33,6 @@ class PicturesController < ApplicationController
   private
 
   def picture_params
-    params.require(:picture).permit(:image_url, :title, :user_id)
+    params.require(:picture).permit(:image_url, :title, :user_id, {:tag_ids => []})
   end
 end

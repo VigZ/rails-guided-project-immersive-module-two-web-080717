@@ -17,7 +17,7 @@ user9 = User.create(email: "mike@mac.com" , username: "MikeMac" , password: "yol
 user10 = User.create(email: "matthias@matt.com" , username: "Croakus" , password: "yolodolo")
 
 
-#Dogs
+#Pictures
 
 picture1 = Picture.create(image_url: "http://cdn3-www.dogtime.com/assets/uploads/gallery/goldador-dog-breed-pictures/puppy-1.jpg", title: "Cute Puppy", user_id: 3)
 picture2 = Picture.create(image_url: "https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Shake-shiver-and-tremble-Why-dogs-do-it.jpg?itok=yvOUgQeL", title: "Another Cute Puppy", user_id: 4)
@@ -27,3 +27,19 @@ picture5 = Picture.create(image_url: "https://static.boredpanda.com/blog/wp-cont
 picture6 = Picture.create(image_url: "http://cdn1-www.dogtime.com/assets/uploads/2011/04/file_2153_column_popular-dog-names.jpg", title: "Group of Doges", user_id: 8)
 picture7 = Picture.create(image_url: "https://i.ytimg.com/vi/4OLJe8iMLg4/hqdefault.jpg", title: "Sad Doge", user_id: 9)
 picture8 = Picture.create(image_url: "https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA4MS80MTIvb3JpZ2luYWwvc2xlZXBpbmctZnJlbmNoLWJ1bGxkb2cuanBn", title: "OMG I AM DEAD S’CUTE", user_id: 10)
+
+
+#Tags
+
+happy= Tag.create(name: "happy")
+sad= Tag.create(name: "sad")
+angry= Tag.create(name: "angry")
+fml= Tag.create(name: "fml")
+lol= Tag.create(name: "lol")
+smh= Tag.create(name: "smh")
+lit= Tag.create(name: "lit")
+goat= Tag.create(name: "goat")
+mustard_cat= Tag.create(name: "mustardcat")
+crazy= Tag.create(name: "crazy")
+beautiful= Tag.create(name: "beautiful")
+poop= Tag.create(name: "poop")
