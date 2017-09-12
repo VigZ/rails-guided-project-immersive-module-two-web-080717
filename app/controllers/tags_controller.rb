@@ -29,6 +29,8 @@ class TagsController < ApplicationController
   end
 
   def destroy
+    Tag.find(params[:id]).destroy
+    redirect_to picture_path
   end
 
   def tag_params
