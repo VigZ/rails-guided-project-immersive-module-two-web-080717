@@ -14,6 +14,49 @@
 <p>tags: </p><% @picture.tags.reject {|c| c.name.empty?}.each do |tag|%>
   <%=link_to tag.name, tag_path(tag)%>
 <%end%>
+
+<%= @picture.reactions.where("reaction_key = 'happy'").count %>
+<%= form_for @reaction do |f| %>
+  <%= f.hidden_field :picture_id %>
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[0]%>
+  <%= f.submit "reaction", :type => :image, :src => @reaction.class.reaction_pictures["happy"] %>
+  <% end %>
+
+<%= @picture.reactions.where("reaction_key = 'sad'").count %>
+<%= form_for @reaction do |f| %>
+  <%= f.hidden_field :picture_id %>
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[1]%>
+  <%= f.submit "reaction", :type => :image, :src => @reaction.class.reaction_pictures["sad"] %>
+  <% end %>
+
+<%= @picture.reactions.where("reaction_key = 'excited'").count %>
+<%= form_for @reaction do |f| %>
+  <%= f.hidden_field :picture_id %>
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[2]%>
+  <%= f.submit "reaction", :type => :image, :src => @reaction.class.reaction_pictures["excited"] %>
+  <% end %>
+
+<%= @picture.reactions.where("reaction_key = 'angry'").count %>
+<%= form_for @reaction do |f| %>
+  <%= f.hidden_field :picture_id %>
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[3]%>
+  <%= f.submit "reaction", :type => :image, :src => @reaction.class.reaction_pictures["angry"] %>
+  <% end %>
+
+<%= @picture.reactions.where("reaction_key = 'mustardcat'").count %>
+<%= form_for @reaction do |f| %>
+  <%= f.hidden_field :picture_id %>
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[4]%>
+  <%= f.submit "reaction", :type => :image, :src => @reaction.class.reaction_pictures["mustardcat"] %>
+  <% end %>
+
+
+
 <h1> Comment: <h1>
 <%= form_for @comment do |f| %>
   <%= f.hidden_field :picture_id %> <br>

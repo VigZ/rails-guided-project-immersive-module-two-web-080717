@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/signout', to: 'sessions#signout'
 
   resources :sessions, only: :create
+  resources :reactions, only: :create
   resources :users, except: :new
   resources :pictures
   resources :tags
