@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :pictures
   resources :tags
   resources :comments
+  resources :followings
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
