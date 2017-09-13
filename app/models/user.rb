@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :reactions
   validates :username, uniqueness: true
   validates :email, uniqueness: true
-  before_destroy :pictures_destroy_all
+  before_destroy :pictures_destroy_all, :followings_destroy_all
   has_secure_password
 
   def to_param
@@ -17,6 +17,11 @@ class User < ApplicationRecord
 
   def pictures_destroy_all
     self.pictures.destroy_all
+  end
+
+  def followings_destroy_all
+    self.followers.destroy_all
+    self.followeds.destroy_all
   end
 
 

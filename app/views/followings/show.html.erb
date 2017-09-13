@@ -1,0 +1,10 @@
+<h2><%= link_to "Back", user_path(@user) %></h2>
+<h1>Followers</h1>
+<% @user.followers.each do |follower|%>
+  <p><%=link_to follower.follower.username, user_path(follower.follower)%></p>
+<%end%>
+
+<h1>Following</h1>
+<% @user.followeds.each do |followed|%>
+  <p><%=link_to followed.followed.username, user_path(followed.followed)%></p>
+<%end%>

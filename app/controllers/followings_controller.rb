@@ -21,7 +21,9 @@ class FollowingsController < ApplicationController
   end
 
   def show
-    @following = Following.find(params[:id])
+    @user = User.find(params[:id])
+    # byebug
+    # @following = Following.find_by(followed_id: @user.id)
   end
 
   def destroy

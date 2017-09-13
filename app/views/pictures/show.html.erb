@@ -9,7 +9,7 @@
 <h1><%= @picture.title %></h1>
 <%= image_tag (@picture.image_url) %>
 <%if @picture.user.id == current_user.id%>
-  <p><%= link_to "Delete Pic", picture_path(@picture), :method => :delete %></p>
+  <p><%= link_to "Delete Pic", picture_path(@picture), :method => :delete, data: {confirm: 'Are you sure?' } %></p>
 <%end%>
 <p>tags: </p><% @picture.tags.reject {|c| c.name.empty?}.each do |tag|%><p>
   <%=link_to tag.name, tag_path(tag)%>
@@ -69,7 +69,7 @@
   <%if comment.user %>
   <p>  <%= link_to comment.user.username, user_path(comment.user) %> : <%= comment.content %>
     <%if comment.user.id == current_user.id || @picture.user.id == current_user.id%>
-      <%= link_to "(delete comment)", comment, :method => 'delete' %><p>
+      <%= link_to "(delete comment)", comment, :method => 'delete', data: {confirm: 'Are you sure?' } %><p>
     <%end%>
   <%else%>
       (deleted): <%=comment.content%><br>

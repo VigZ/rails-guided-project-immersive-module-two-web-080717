@@ -1,5 +1,5 @@
 <% if signed_in? %>
-Have a pic, <%= current_user.username.capitalize %>? You should share it!
+Have a pic, <%= current_user.username.capitalize %>? You should <%= link_to 'share it!', new_picture_path %>
 
 <%=link_to "Sign Out", signout_path %>
 
