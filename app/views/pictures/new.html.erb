@@ -8,7 +8,7 @@
 
     <%= f.label :tags%>:
     <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name do |b| %>
-      <%=b.check_box %> <%=b.text%>
+      <%=b.check_box %> #<%=b.text%>
     <%end%>
 
     <%= f.hidden_field :user_id %><br>
