@@ -1,12 +1,19 @@
 class User < ApplicationRecord
   has_many :pictures
-  has_many :comments, through: :pictures
+  has_many :comments
   validates :username, uniqueness: true
   validates :email, uniqueness: true
+  before_destroy :pictures_destroy_all
   has_secure_password
 
   def to_param
     username
+  end
+
+  private
+
+  def pictures_destroy_all
+    self.pictures.destroy_all
   end
 
 
