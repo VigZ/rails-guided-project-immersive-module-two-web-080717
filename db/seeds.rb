@@ -43,3 +43,16 @@ mustard_cat= Tag.create(name: "mustardcat")
 crazy= Tag.create(name: "crazy")
 beautiful= Tag.create(name: "beautiful")
 poop= Tag.create(name: "poop")
+
+#Followers
+
+follow_1 = Following.create(followed_id: 1, follower_id: 2)
+follow_2 = Following.create(followed_id: 1, follower_id: 4)
+follow_3 = Following.create(followed_id: 1, follower_id: 5)
+follow_1 = Following.create(followed_id: 1, follower_id: 6)
+
+#Following
+
+following_1 = Following.create(followed_id: 2, follower_id: 1)
+following_1 = Following.create(followed_id: 4, follower_id: 1)
+following_1 = Following.create(followed_id: 5, follower_id: 1)
