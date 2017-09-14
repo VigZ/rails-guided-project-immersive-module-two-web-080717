@@ -7,14 +7,6 @@
 <% end %>
 <div class="following">
 <h1> <%= @user.username %></h1> <h4><%=link_to "Followers: #{total_followers.count} Following: #{total_followeds.count}", following_path(@user.id)%></h4>
-<%if @user.id == current_user.id%>
-  <h2><%=link_to "please share a pic!", new_picture_path %></h2>
-    <h2><%= link_to "Home Page", users_path %></h2>
-<%else%>
-    <%=link_to "Back to your Profile!", current_user%></h2>
-  <br>
-    <%= link_to "Home Page", users_path %><br>
-<%end%>
 </div>
 
 
@@ -30,27 +22,30 @@
       <%= f.submit value="Follow", :class => 'follow'%>
     <%end%>
   <%else%>
-    <%= button_to "Unfollow", following_path(:id => @followings.select{|m| m.followed_id == @user.id && m.follower_id == current_user.id}), :method => :delete %>
+    <%= button_to "Unfollow", following_path(:id => @followings.select{|m| m.followed_id == @user.id && m.follower_id == current_user.id}), :method => :delete, :class => 'unfollow'  %>
   <%end%>
 <%end%>
 </div>
 
-
-
-<%if @user.pictures.empty?%>
+<%if @user.pictures.empty? && @user.id == current_user.id%>
   <h1>Share some pics!</h1>
 <%else%>
   <%if @user.id == current_user.id%>
     <h2>Here are your pics!</h2>
   <%else%>
-    <h2>Here are <%= @user.username %>'s pics... </h2>
+    <%if @user.pictures.empty?%>
+      <h2><%= @user.username %> has no pics... </h2>
+    <%else%>
+      <h2>Here are <%= @user.username %>'s pics... </h2>
+    <%end%>
   <%end%>
     <%@pictures.order('created_at DESC').each do |picture| %>
-      <h1><%= picture.title %><h2>
-      <img><%= link_to (image_tag (picture.image_url), style:"height: auto; width: 300px;"), picture_path(picture) %><img>
+      <h3><%= picture.title %><h3>
+      <%= link_to (image_tag (picture.image_url), style:"height: auto; width: 300px;"), picture_path(picture) %><img>
     <% end %>
 <%end%>
 
+<ul class="delete_account">
 <%if @user.id == current_user.id %>
-  <h4 class="delete_account"><%= link_to "Delete Account", user_path(@user), :method => 'delete', data: {confirm: 'Are you sure?' } %></h4>
-<%end%>
+  <li><%= link_to "Delete Account", user_path(@user), :method => 'delete', data: {confirm: 'Are you sure?' }, :style => 'text-decoration: none; color: white; font-family: Arial; font-size: 1.5vw; padding: 15px; margin: auto;' %></li><%end%>
+</ul>
