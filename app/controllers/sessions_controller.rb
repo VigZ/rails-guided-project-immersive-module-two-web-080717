@@ -18,6 +18,6 @@ skip_before_action :signin_required, :only => [:signin, :create]
 
   def signout
     session[:user_id] = nil
-    redirect_to users_path
+    redirect_to signin_path
   end
 end

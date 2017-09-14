@@ -1,11 +1,13 @@
 <ul class="header">
   <% if signed_in? %>
       <li><%= link_to (image_tag ('picshare_icon.png'), style:"height: auto; width: 25px; margin-top: 5px;"), users_path %></li>
-      <li><%= link_to "home", current_user, {:style => 'text-decoration: none; color: white; display: block; font-family: Arial; font-size: 1.5vw; padding: 15px; margin: auto;'} %></li>
-      <li><%= link_to 'share a pic!', new_picture_path, {:style => 'text-decoration: none; color: white; display: block; font-family: Arial; font-size: 1.5vw; padding: 15px; margin: auto;'}  %></li>
-      <li><%=link_to "sign out", signout_path, {:style => 'text-decoration: none; color: white; display: block; font-family: Arial; font-size: 1.5vw; padding: 15px; margin: auto;'} %></li>
+      <li><%= link_to "home", current_user, {:style => 'text-decoration: none; color: white; display: block; padding: 15px; margin: auto; font-family: Ubuntu; font-size: 1.5vw;'} %></li>
+      <li><%= link_to 'share a pic!', new_picture_path, {:style => 'text-decoration: none; color: white; display: block; font-family: Ubuntu; font-size: 1.5vw; padding: 15px; margin: auto;'}  %></li>
+      <li><%=link_to "sign out", signout_path, {:style => 'text-decoration: none; color: white; display: block; font-family: Ubuntu; font-size: 1.5vw; padding: 15px; margin: auto;'} %></li>
       <li class="hello_user">Hey <%= current_user.username.capitalize %>!</li>
 <% else %>
-      <li><%=link_to "Please sign in!", signin_path %> Or... <%= link_to "Sign Up", users_signup_path %></li>
+        <li><%= link_to (image_tag ('picshare_icon.png'), style:"height: auto; width: 25px; margin-top: 5px;"), users_path %></li>
+        <li><%=link_to "Please sign in!", signin_path, {:style => 'text-decoration: none; color: white; display: block; font-family: Ubuntu; font-size: 1.5vw; padding: 15px; margin: auto;'}  %> </li>
+        <li><%= link_to "Or Create An Account", users_signup_path, {:style => 'text-decoration: none; color: white; display: block; font-family: Ubuntu; font-size: 1.5vw; padding: 15px; margin: auto;'}  %></li>
 <% end %>
 </ul>
