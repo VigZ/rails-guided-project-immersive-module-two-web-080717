@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(username: params[:id])
     @pictures = @user.pictures
+    @followings = Following.all
   end
 
   def edit
@@ -42,7 +43,7 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
-  private
+ private
 
   def user_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation)

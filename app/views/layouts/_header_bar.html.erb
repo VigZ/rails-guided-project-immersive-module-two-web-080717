@@ -1,11 +1,15 @@
-<% if signed_in? %>
-Have a pic, <%= current_user.username.capitalize %>? You should <%= link_to 'share it!', new_picture_path %>
 
-<%=link_to "Sign Out", signout_path %>
-
+<div class="header">
+  <% if signed_in? %>
+    <div class="hello_user">
+      Hey <%=current_user.username.capitalize%>!
+    </div>
+      <%=link_to "Home", signout_path %>
+      <%= link_to 'share a pic!', new_picture_path, {:style=>'color:#FFFFFF; text-decoration: none; color: white;', :class => "share"}  %>
+<div class="sign_out">
+  <%=link_to "Sign Out", signout_path %>
+</div>
 <% else %>
-
-<%= link_to "Please sign in!", signin_path %> Or... <%= link_to "Sign Up", users_signup_path %>
-
-
+<%=link_to "Please sign in!", signin_path %> Or... <%= link_to "Sign Up", users_signup_path %>
 <% end %>
+</div>

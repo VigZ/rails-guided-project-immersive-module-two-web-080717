@@ -1,4 +1,4 @@
-
+<body>
 <%if current_user.username != @picture.user.username%>
   <h2><%=link_to "Back to #{@picture.user.username}'s profile...", @picture.user%></h2>
   <h2><%=link_to "Back to your Profile!", current_user%></h2>
@@ -75,3 +75,4 @@
       (deleted): <%=comment.content%><br>
   <%end%>
 <% end %>
+</body>

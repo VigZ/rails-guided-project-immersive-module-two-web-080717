@@ -28,11 +28,12 @@ class FollowingsController < ApplicationController
 
   def destroy
     @following = Following.find(params[:id])
+    @user = User.find(@following.followed_id)
     @following.destroy
     redirect_to user_path(@user)
   end
 
-  private
+ private
 
   def following_params
     params.require(:following).permit(:follower_id, :followed_id)
