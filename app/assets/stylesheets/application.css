@@ -140,8 +140,8 @@
 
  h1.username_profile{
    text-align: center;
-   margin-left: 32%;
-   margin-right: 32%;
+   margin-left: 25%;
+   margin-right: 25%;
    color: #27AAE1;
    font-size: 3vw;
    font-size: 5vw;
@@ -332,7 +332,6 @@ div.individual_user_on_index:hover{
    border-radius: 5px;
    border-color: #7FDBFF;
    margin: 0;
-   width: 10%;
  }
 
  .sign_in_button:hover{
