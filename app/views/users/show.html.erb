@@ -6,6 +6,9 @@
   <% follower.followed %>
 <% end %>
 <div class="following">
+    <div class="profile_picture_top">
+      <%= link_to (image_tag (@user.profile_pic), class: 'banner_img', style:"height: auto; width: 25%; margin-top: 5em; border-radius: 10px;"), new_picture_path %>
+    </div>
   <br>
 <h1 class="username_profile"> <%= @user.username %></h1> <h4 class="following_list"><%=link_to " #{total_followers.count} Followers #{total_followeds.count} Following", following_path(@user.id), {:style => 'text-decoration: none; color: white; display: block; padding: 15px; margin: auto; font-family: Ubuntu; font-size: 1.5vw;'}%></h4>
 </div>

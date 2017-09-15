@@ -1,21 +1,35 @@
+<br>
+<br>
 <h1> Upload Your Pic! </h1>
-<%=link_to "Back to your Profile!", current_user%></h2>
+<div class="upload_pic_form">
   <%= form_for @picture do |f| %>
+  <br>
     <%=f.label :post_title%>:
     <%= f.text_field :title %><br>
-
-    <%=f.label :image_url%>
+      <br>
+    <%=f.label :image_url%>:
     <%= f.text_field :image_url %><br>
-
+      <br>
     <%= f.label :tags%>:
+    <br>
+    <br>
     <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name do |b| %>
       <%=b.check_box %> #<%=b.text%>
     <%end%>
 
     <%= f.hidden_field :user_id %><br>
-    <%= f.submit value="Upload Picture" %>
+    <%= f.submit value="Upload Picture", class: 'upload_pic_button' %>
   <% end %>
+<div class="upload_pic_form">
+<div class="upload_profile_pic_form">
+  <h1> Or change your profile picture! </h1>
+  <%= form_for @user do |f| %>
+  <br>
+    <%=f.label :profile_pic%>:
+    <%= f.text_field :profile_pic %>
 
-  <!-- <%= form_for @picture do |f| %>
-    <%= f.file_field :picture %>
-  <% end %> -->
+   <%= f.hidden_field :id %><br>
+    <%= f.submit value="Upload Profile Picture", class: 'upload_pic_button' %>
+  <% end %>
+  </div>
+</div>

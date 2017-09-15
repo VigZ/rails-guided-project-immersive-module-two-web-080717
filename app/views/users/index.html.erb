@@ -11,8 +11,8 @@
 </div>
 
 <div class="index_pictures">
-    <%if Picture.all.count > 8 %>
-      <%Picture.all.sample(8).each do |picture|%>
+    <%if Picture.all.count > 16 %>
+      <%Picture.all.sample(16).each do |picture|%>
         <div class="index_picture_child">
           <%= link_to (image_tag (picture.image_url), class: 'single_index_pictures', style:"height: auto; text-decoration: none;"), picture_path(picture) %>
         </div>

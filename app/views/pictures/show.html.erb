@@ -1,4 +1,5 @@
 <body>
+  <%=flash[:error]%>
 <br>
 <br>
 <h1 class="username_profile"><%= @picture.title %></h1>
@@ -10,42 +11,39 @@
 <%end%>
 <div class="reactions">
   <ul>
-  <li><%= @picture.reactions.where("reaction_key = 'happy'").count %>
-    <%= form_for @reaction do |f| %>
-      <%= f.hidden_field :picture_id %>
-      <%= f.hidden_field :user_id %>
-      <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[0]%>
-      <%= f.submit "reaction", :class => 'reaction', :type => :image, :src => @reaction.class.reaction_pictures["happy"] %>
-  <% end %>
+    <li><div style="text-align:center"><%= @picture.reactions.where("reaction_key = 'happy'").count %></div>
+      <%= form_for @reaction do |f| %>
+        <%= f.hidden_field :picture_id %>
+        <%= f.hidden_field :user_id %>
+        <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[0]%>
+        <%= f.submit "reaction", :class => 'reaction', :type => :image, :src => @reaction.class.reaction_pictures["happy"] %>
+    <% end %>
+    </li>
+<li><div style="text-align:center"><%= @picture.reactions.where("reaction_key = 'sad'").count %></div>
+  <%= form_for @reaction do |f| %>
+    <%= f.hidden_field :picture_id %>
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[1]%>
+    <%= f.submit "reaction", :class => 'reaction', :type => :image, :src => @reaction.class.reaction_pictures["sad"] %>
+<% end %>
 </li>
-<li>
-<%= @picture.reactions.where("reaction_key = 'sad'").count %>
-<%= form_for @reaction do |f| %>
-  <%= f.hidden_field :picture_id %>
-  <%= f.hidden_field :user_id %>
-  <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[1]%>
-  <%= f.submit "reaction", :class => 'reaction', :type => :image, :src => @reaction.class.reaction_pictures["sad"] %>
-  <% end %>
+<li><div style="text-align:center"><%= @picture.reactions.where("reaction_key = 'excited'").count %></div>
+  <%= form_for @reaction do |f| %>
+    <%= f.hidden_field :picture_id %>
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[2]%>
+    <%= f.submit "reaction", :class => 'reaction', :type => :image, :src => @reaction.class.reaction_pictures["excited"] %>
+<% end %>
 </li>
-<li>
-<%= @picture.reactions.where("reaction_key = 'excited'").count %>
-<%= form_for @reaction do |f| %>
-  <%= f.hidden_field :picture_id %>
-  <%= f.hidden_field :user_id %>
-  <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[2]%>
-  <%= f.submit "reaction", :class => 'reaction', :type => :image, :src => @reaction.class.reaction_pictures["excited"] %>
-  <% end %>
+<li><div style="text-align:center"><%= @picture.reactions.where("reaction_key = 'angry'").count %></div>
+  <%= form_for @reaction do |f| %>
+    <%= f.hidden_field :picture_id %>
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[3]%>
+    <%= f.submit "reaction", :class => 'reaction', :type => :image, :src => @reaction.class.reaction_pictures["angry"] %>
+<% end %>
 </li>
-<li>
-<%= @picture.reactions.where("reaction_key = 'angry'").count %>
-<%= form_for @reaction do |f| %>
-  <%= f.hidden_field :picture_id %>
-  <%= f.hidden_field :user_id %>
-  <%= f.hidden_field :reaction_key, :value => @reaction.class.reaction_pictures.keys[3]%>
-  <%= f.submit "reaction", :class => 'reaction', :type => :image, :src => @reaction.class.reaction_pictures["angry"] %>
-  <% end %>
-</li>
-<li><%= @picture.reactions.where("reaction_key = 'lmao'").count %>
+<li><div style="text-align:center"><%= @picture.reactions.where("reaction_key = 'lmao'").count %></div>
   <%= form_for @reaction do |f| %>
     <%= f.hidden_field :picture_id %>
     <%= f.hidden_field :user_id %>
@@ -53,8 +51,8 @@
     <%= f.submit "reaction", :class => 'reaction', :type => :image, :src => @reaction.class.reaction_pictures["lmao"] %>
 <% end %>
 </li>
-<li>
-<%= @picture.reactions.where("reaction_key = 'mustardcat'").count %>
+<li><div style="text-align:center">
+<%= @picture.reactions.where("reaction_key = 'mustardcat'").count %></div>
 <%= form_for @reaction do |f| %>
   <%= f.hidden_field :picture_id %>
   <%= f.hidden_field :user_id %>
@@ -62,7 +60,6 @@
   <%= f.submit "reaction", :class => 'reaction', :type => :image, :src => @reaction.class.reaction_pictures["mustardcat"] %>
   <% end %>
 </li>
-
 </ul>
 </div>
 <div class="tags_list">
@@ -72,14 +69,12 @@
 <%end%>
 </ul>
 </div>
-
-
 <%= form_for @comment do |f| %>
-  <%= f.hidden_field :picture_id %> <br>
-  <%= f.hidden_field :user_id %> <br>
+  <%= f.hidden_field :picture_id %>
+  <%= f.hidden_field :user_id %>
   <h1> Comments: <h1><%= f.text_area :content %> <br>
   <%= f.submit value="comment", :class => 'comment_button' %>
-<% end %><br>
+<% end %>
 <% @comments.each do |comment| %>
   <%if comment.user %>
   <p class="comments">  <%= link_to( "@"+comment.user.username, user_path(comment.user), {:style => 'text-decoration: none; display: block; padding: 15px; margin: auto; font-family: Ubuntu; font-size: 1.5vw;'}) %>  <%= comment.content %>

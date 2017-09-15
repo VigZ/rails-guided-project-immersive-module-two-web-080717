@@ -1,9 +1,26 @@
-<h1>Followers</h1>
-<% @user.followers.each do |follower|%>
-  <p><%=link_to follower.follower.username, user_path(follower.follower)%></p>
-<%end%>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="following_and_folowers">
+<div class="followers_show_page">
+<h1>Followers</h1>
+<% @user.followers.each do |follower| %>
+  <div class="individual_user_on_index">
+    <h4 class="users_you_may_know"><%=link_to follower.follower.username, user_path(follower.follower), {:style => 'text-decoration: none; color: white; display: block; padding: 8%; margin: auto; font-family: Ubuntu; font-size: 1.5vw;'} %> <h4>
+  </div>
+<% end %>
+</div>
+
+<div class="following_show_page">
 <h1>Following</h1>
-<% @user.followeds.each do |followed|%>
-  <p><%=link_to followed.followed.username, user_path(followed.followed)%></p>
-<%end%>
+<% @user.followeds.each do |followed| %>
+  <div class="individual_user_on_index">
+    <h4 class="users_you_may_know"><%=link_to followed.followed.username, user_path(followed.followed), {:style => 'text-decoration: none; color: white; display: block; padding: 8%; margin: auto; font-family: Ubuntu; font-size: 1.5vw;'} %> <h4>
+  </div>
+<% end %>
+</div>
+</div>
+<br>

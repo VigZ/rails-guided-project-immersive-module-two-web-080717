@@ -26,11 +26,12 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+
   end
 
   def update
-    @user = User.find(params[:id])
-    if @user.update(user_params)
+    @user = User.find_by(username: params[:id])
+    if @user.update(profile_pic: params[:user][:profile_pic])
       redirect_to user_path(@user)
     else
       redirect_to edit_user_path

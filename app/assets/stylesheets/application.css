@@ -23,7 +23,86 @@
    font-family: 'Ubuntu', sans-serif;
  }
 
+.edit_user{
+  margin: 3%;
+  text-align: center;
+  border: 3px solid;
+  border-radius: 10px;
+  border-color: #27AAE1;
+  box-shadow:1px 3px 1px grey;
+  margin-left: 24%;
+  margin-right: 24%;
+}
 
+#picture_image_url{
+  border-style: solid 5px;
+  border-radius: 6px;
+  border-color: #27AAE1;
+  margin: 1%;
+}
+
+#picture_title{
+  border-style: solid 5px;
+  border-radius: 6px;
+  border-color: #27AAE1;
+  margin: 1%;
+}
+
+#comment_content{
+  border-style: solid 5px;
+  border-radius: 6px;
+  border-color: #27AAE1;
+  margin: 1%;
+  width: 20%;
+}
+
+#user_profile_pic{
+  border-style: solid 5px;
+  border-radius: 6px;
+  border-color: #27AAE1;
+}
+
+#username{
+  border-style: solid 5px;
+  border-radius: 6px;
+  border-color: #27AAE1;
+  margin: 1%;
+}
+
+#password{
+  border-style: solid 5px;
+  border-radius: 6px;
+  border-color: #27AAE1;
+  margin: 1%;
+}
+
+#user_username{
+  border-style: solid 5px;
+  border-radius: 6px;
+  border-color: #27AAE1;
+  margin: 1%;
+}
+
+#user_email{
+  border-style: solid 5px;
+  border-radius: 6px;
+  border-color: #27AAE1;
+    margin: 1%;
+}
+
+#user_password{
+  border-style: solid 5px;
+  border-radius: 6px;
+  border-color: #27AAE1;
+    margin: 1%;
+}
+
+#user_password_confirmation{
+  border-style: solid 5px;
+  border-radius: 6px;
+  border-color: #27AAE1;
+  margin: 1%;
+}
 
  .banner_img{
    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
@@ -32,6 +111,8 @@
        -o-animation: fadein 3s; /* Opera < 12.1 */
           animation: fadein 3s;
 }
+
+
 
 @keyframes fadein {
   from { opacity: 0; }
@@ -101,6 +182,31 @@
    padding-bottom: 1.7%;
    font-size: 1.5vw;
 
+ }
+
+ div.followers_show_page{
+   float: left;
+   margin-left: 5%;
+   margin-right: 5%;
+   border: 3px solid black;
+   border-color: #27AAE1;
+   box-shadow:1px 3px 1px grey;
+   margin-top: 0;
+   border-radius: 10px;
+   width: 35%;
+ }
+
+
+ div.following_show_page{
+   float: right;
+   margin-left: 5%;
+   margin-right: 5%;
+   border: 3px solid black;
+   border-color: #27AAE1;
+   box-shadow:1px 3px 1px grey;
+   margin-top: 0;
+   border-radius: 10px;
+   width: 35%;
  }
 
  div.users_you_may_know_div{
@@ -190,6 +296,7 @@ div.individual_user_on_index:hover{
      border-radius: 5px;
      border-color: #7FDBFF;
      margin: 0;
+     width: 10%;
  }
 
  .comment_button:hover{
@@ -225,6 +332,7 @@ div.individual_user_on_index:hover{
    border-radius: 5px;
    border-color: #7FDBFF;
    margin: 0;
+   width: 10%;
  }
 
  .sign_in_button:hover{
@@ -264,10 +372,16 @@ div.sign_in_form {
  img.show_img {
    width: 40%;
    height: auto;
-   border-radius: 5px;
+   border-radius: 10px;
    margin-left: 30%;
    margin-right: 30%;
- }
+     -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+  }
+
 
  h4.following_list{
    background-color: #27AAE1;
@@ -325,6 +439,7 @@ div.sign_in_form {
    border-color: #7FDBFF;
    margin: 0;
  }
+
  .tags{
    color: #7FDBFF;
  }
@@ -380,12 +495,42 @@ div.sign_in_form {
    font-family: 'Ubuntu', sans-serif;
  }
 
+ div.upload_pic_form{
+
+ }
+
+ .new_picture{
+   margin: 3%;
+   text-align: center;
+   border: 3px solid;
+   border-radius: 10px;
+   border-color: #27AAE1;
+   box-shadow:1px 3px 1px grey;
+   margin-left: 24%;
+   margin-right: 24%;
+ }
+
+.upload_pic_button{
+   background-color: #27AAE1;
+   color: white;
+   display: center;
+   border-radius: 5px;
+   border-color: #7FDBFF;
+   margin: 4%;
+ }
+
+ .upload_pic_button:hover{
+ 	color: white;
+ 	box-shadow:1px 3px 1px grey;
+   transform: scale(1.1);
+ }
+
  li.delete_pic{
    margin-left: 43.5%;
 
  }
 
- ul li :hover{
+ ul.header li :hover{
  	color: white;
   transform: scale(1.3);
  }
